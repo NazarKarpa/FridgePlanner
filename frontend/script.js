@@ -26,40 +26,68 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //-----------------card---------------//
 
-    function createRecipeCard(recipe) {
+function createRecipeCard(recipe) {
 
-        const missingIngredients = recipe.missedIngredients
-            .map(ingredient => `<li>${ingredient.name}</li>`)
-            .join("");
+    const missingIngredients = recipe.missedIngredients
+        .map(ingredient => `<li>${ingredient.name}</li>`)
+        .join("");
 
-        return `
+    return `
         <div class="flip-card">
 
             <div class="flip-card__inner">
 
                 <div class="flip-card__front">
 
-                    <img class="recipe-image" src="${recipe.image}" alt="${recipe.title}">
+                    <div class="image-wrapper">
 
-                    <h3>${recipe.title}</h3>
+                        <img class="recipe-image"
+                            src="${recipe.image}"
+                            alt="${recipe.title}">
 
-                    <p>✅ Використано: ${recipe.usedIngredientCount}</p>
+                        <div class="card-badges">
 
-                    <p>❤️ ${recipe.likes}</p>
+                            <span class="badge likes">
+                                ❤️ ${recipe.likes}
+                            </span>
+
+                            <span class="badge missing">
+                                ❌ ${recipe.missedIngredientCount}
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="recipe-info">
+
+                        <h3 class="recipe-title">
+                            ${recipe.title}
+                        </h3>
+
+                        <div class="recipe-stats">
+
+                            <span>✅ ${recipe.usedIngredientCount} продуктів</span>
+
+                            <span>🍽️ Рецепт</span>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
                 <div class="flip-card__back">
 
-                    <h3>Не вистачає</h3>
+                    <h2>Не вистачає</h2>
 
-                    <ul>
+                    <ul class="missing-list">
                         ${missingIngredients}
                     </ul>
 
                     <button class="recipe-button"
                             data-id="${recipe.id}">
-                        Детальніше
+                        Переглянути рецепт
                     </button>
 
                 </div>
@@ -68,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         </div>
     `;
-    }
+}
 
     function renderRecipes(recipes) {
 
