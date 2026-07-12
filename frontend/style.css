@@ -1,7 +1,17 @@
 header{
-    background-color: #C0D6DF;
-    color: #4F6D7A;
+    background-color: #A8D5BA;
+    color: #FFFFFF;
     display: flex;
-    gap: 5px;
+    gap: 10px;
 }
 
+.main-tag{
+    padding: 4px;
+    margin: 20px;
+    font-size: 18px;
+}
+
+body{
+    background-color: #FAF9F5;
+    color: #3D3D3D;
+}
