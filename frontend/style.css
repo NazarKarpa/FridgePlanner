@@ -1,8 +1,17 @@
 header{
+    
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    
+    gap: 53px;
+    
     background-color: #A8D5BA;
     color: #FFFFFF;
     display: flex;
-    gap: 10px;
+    
 }
 
 .main-tag{
@@ -14,4 +23,5 @@ header{
 body{
     background-color: #FAF9F5;
     color: #3D3D3D;
+    display: 'flex';
 }
