@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     const productInput = document.getElementById("productInput");
-    const searchBtn = document.querySelector(".button-search");
+    const searchBtn = document.querySelector("#search");
     const resultContainer = document.querySelector(".result-container");
 
 
