@@ -24,5 +24,202 @@ header{
 body{
     background-color: #FAF9F5;
     color: #3D3D3D;
-    display: 'flex';
+    display: 'flex';}
+/*---------------- card --------------*/
+
+
+.flip-card{
+    width:300px;
+    height:400px;
+    perspective:1000px;
+}
+
+.flip-card__inner{
+    position:relative;
+    width:100%;
+    height:100%;
+    transition:transform .6s;
+    transform-style:preserve-3d;
+}
+
+.flip-card:hover .flip-card__inner{
+    transform:rotateY(180deg);
+}
+
+.flip-card__front,
+.flip-card__back{
+
+    position:absolute;
+    inset:0;
+
+    border-radius:20px;
+    overflow:hidden;
+
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+
+    border:1px solid #d9e2ec;
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+
+    box-sizing:border-box;
+}
+
+.flip-card__front{
+    background:white;
+}
+
+.flip-card__back{
+
+    transform:rotateY(180deg);
+
+    background:linear-gradient(135deg,#4F6D7A,#7698A5);
+
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:20px;
+
+    padding:25px;
+}
+
+/*--------------- IMAGE ----------------*/
+
+.image-wrapper{
+    position:relative;
+    height:200px;
+}
+
+.recipe-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/*-------------- BADGES ----------------*/
+
+.card-badges{
+    position:absolute;
+    top:12px;
+    left:12px;
+    right:12px;
+
+    display:flex;
+    justify-content:space-between;
+}
+
+.badge{
+    background:rgba(255,255,255,.9);
+    backdrop-filter:blur(8px);
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    font-size:14px;
+    font-weight:600;
+
+    color:#333;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+/*-------------- INFO ----------------*/
+
+.recipe-info{
+    padding:18px;
+}
+
+.recipe-title{
+    font-size:21px;
+    margin-bottom:15px;
+    color:#2d3748;
+    min-height:55px;
+}
+
+.recipe-stats{
+    display:flex;
+    justify-content:space-between;
+    color:#666;
+    font-size:15px;
+}
+
+/*-------------- BACK ----------------*/
+
+.flip-card__back h2{
+    margin:0;
+}
+
+.missing-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.missing-list li{
+    margin-bottom:10px;
+    padding:8px 12px;
+    background:rgba(255,255,255,.15);
+    border-radius:10px;
+}
+
+/*-------------- BUTTON ----------------*/
+
+.recipe-button {
+    margin-top: auto;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    background: white;
+    color: #4F6D7A;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: background 0.25s ease, transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+}
+
+.recipe-button:hover {
+    background: #e8e8e8;
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 15px rgba(157, 189, 195, 0.4);
+}
+
+.recipe-button:active {
+    transform: translateY(0);
+    box-shadow: 0px 3px 5px rgba(157, 189, 195, 0.4);
+}
+
+/*-------------- GRID ----------------*/
+
+.result-container{
+
+    display:flex;
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:25px;
+
+    padding:30px;
+}
+
+#search{
+    padding: 8px 14px;
+}
+
+#productInput{
+    max-width: 200px;
+    border: 1px solid #6cc6e1;
+    border-radius: 34px;
+    padding: 8px 10px;
+    
+}
+
+#productInput:hover{
+    border: 1px solid #00c3ff;
+    border-radius: 34px;
+
 }
