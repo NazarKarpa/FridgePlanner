@@ -1,18 +1,32 @@
 header{
-    background-color: #C0D6DF;
-    color: #4F6D7A;
+    
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    
+    gap: 53px;
+    
+    background-color: #A8D5BA;
+    color: #FFFFFF;
     display: flex;
-    gap: 5px;
+    
 }
             
 
+.main-tag{
+    padding: 4px;
+    margin: 20px;
+    font-size: 18px;
+}
+
+body{
+    background-color: #FAF9F5;
+    color: #3D3D3D;
+    display: 'flex';}
 /*---------------- card --------------*/
 
-*,
-*::before,
-*::after{
-    box-sizing:border-box;
-}
 
 .flip-card{
     width:300px;
@@ -190,4 +204,22 @@ header{
     gap:25px;
 
     padding:30px;
+}
+
+#search{
+    padding: 8px 14px;
+}
+
+#productInput{
+    max-width: 200px;
+    border: 1px solid #6cc6e1;
+    border-radius: 34px;
+    padding: 8px 10px;
+    
+}
+
+#productInput:hover{
+    border: 1px solid #00c3ff;
+    border-radius: 34px;
+
 }
