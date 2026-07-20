@@ -5,77 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Рецепт</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <header>
-        <a href="index.html">← Назад</a>
+        <a href="index.html">Back</a>
     </header>
 
     <main>
-        <h1 id="recipe-title">Назва рецепта</h1>
+        <h1 id="recipe-title">Name recept</h1>
         <img id="recipe-image" src="" alt="Фото рецепта">
 
-        <p><strong>Опис:</strong></p>
+        <p><strong>description:</strong></p>
         <div id="recipe-summary"></div>
 
         <hr>
 
-        <h2>Основна інформація</h2>
+        <h2>Information</h2>
 
-        <p><strong>Час приготування:</strong> <span id="recipe-time"></span> хв</p>
-        <p><strong>Порцій:</strong> <span id="recipe-servings"></span></p>
-        <p><strong>Рейтинг:</strong> <span id="recipe-likes"></span> ❤️</p>
-        <p><strong>Вегетаріанська:</strong> <span id="recipe-vegetarian"></span></p>
-        <p><strong>Веганська:</strong> <span id="recipe-vegan"></span></p>
-        <p><strong>Без глютену:</strong> <span id="recipe-gluten"></span></p>
-        <p><strong>Без молочних продуктів:</strong> <span id="recipe-dairy"></span></p>
-        <p><strong>Дуже корисна:</strong> <span id="recipe-healthy"></span></p>
-        <p><strong>Дешева:</strong> <span id="recipe-cheap"></span></p>
+        <p><strong>Preparation Time:</strong> <span id="recipe-time"></span> min</p>
+        <p><strong>Portions:</strong> <span id="recipe-servings"></span></p>
+        <p><strong>Rating:</strong> <span id="recipe-likes"></span> ❤️</p>
+        <p><strong>Vegan:</strong> <span id="recipe-vegetarian"></span></p>
+        <p><strong>Vegetarian:</strong> <span id="recipe-vegan"></span></p>
+        <p><strong>Gluten-Free:</strong> <span id="recipe-gluten"></span></p>
+        <p><strong>Dairy-Free:</strong> <span id="recipe-dairy"></span></p>
+        <p><strong>Healthy:</strong> <span id="recipe-healthy"></span></p>
+        <p><strong>Affordable:</strong> <span id="recipe-cheap"></span></p>
 
         <hr>
 
-        <h2>Інгредієнти</h2>
+        <h2>Ingredients</h2>
         <ul id="ingredients-list"></ul>
 
         <hr>
 
-        <h2>Покрокове приготування</h2>
+        <h2>Step-by-Step Preparation</h2>
         <ol id="recipe-steps"></ol>
 
         <hr>
 
-        <h2>Обладнання</h2>
+        <h2>Equipment</h2>
         <ul id="equipment-list"></ul>
 
         <hr>
 
-        <h2>Страви</h2>
+        <h2>Dish Types</h2>
         <ul id="dish-types"></ul>
 
         <hr>
 
-        <h2>Кухня</h2>
+        <h2>Cuisines</h2>
         <ul id="cuisines"></ul>
 
         <hr>
 
-        <h2>Дієти</h2>
+        <h2>Diets</h2>
         <ul id="diets"></ul>
 
         <hr>
 
-        <h2>Теги</h2>
+        <h2>Tags</h2>
         <ul id="occasions"></ul>
 
         <hr>
 
-        <h2>Джерело рецепта</h2>
+        <h2>Source of the Recipe</h2>
         <a id="recipe-source" target="_blank">Відкрити оригінальний рецепт</a>
 
     </main>
     <script src="recipe.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 </html>
