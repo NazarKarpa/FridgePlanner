@@ -26,61 +26,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //-----------------card---------------//
 
-function createRecipeCard(recipe) {
+    function createRecipeCard(recipe) {
 
-    const missingIngredients = recipe.missedIngredients
-        .map(ingredient => `<li>${ingredient.name}</li>`)
-        .join("");
+        const missingIngredients = recipe.missedIngredients
+            .map(ingredient => `<li>${ingredient.name}</li>`)
+            .join("");
 
-    return `
+        return `
         <div class="flip-card">
-
             <div class="flip-card__inner">
-
                 <div class="flip-card__front">
-
                     <div class="image-wrapper">
-
                         <img class="recipe-image"
                             src="${recipe.image}"
                             alt="${recipe.title}">
-
                         <div class="card-badges">
-
                             <span class="badge likes">
                                 ❤️ ${recipe.likes}
                             </span>
-
                             <span class="badge missing">
                                 ❌ ${recipe.missedIngredientCount}
                             </span>
-
                         </div>
-
                     </div>
-
                     <div class="recipe-info">
-
                         <h3 class="recipe-title">
                             ${recipe.title}
                         </h3>
-
                         <div class="recipe-stats">
-
                             <span>✅ ${recipe.usedIngredientCount} продуктів</span>
-
                             <span>🍽️ Рецепт</span>
-
                         </div>
-
                     </div>
-
                 </div>
 
                 <div class="flip-card__back">
-
                     <h2>Не вистачає</h2>
-
                     <ul class="missing-list">
                         ${missingIngredients}
                     </ul>
@@ -89,14 +70,11 @@ function createRecipeCard(recipe) {
                             data-id="${recipe.id}">
                         Переглянути рецепт
                     </button>
-
                 </div>
-
             </div>
-
         </div>
     `;
-}
+    }
 
     function renderRecipes(recipes) {
 
@@ -104,6 +82,21 @@ function createRecipeCard(recipe) {
 
         recipes.forEach(recipe => {
             resultContainer.innerHTML += createRecipeCard(recipe);
+        });
+
+        addRecipeEvents();
+    }
+
+    function addRecipeEvents() {
+
+        const buttons = document.querySelectorAll(".recipe-button");
+        buttons.forEach(button => {
+            button.addEventListener("click", async () => {
+
+                const recipeId = button.dataset.id;
+                window.location.href = `recipe.html?id=${recipeId}`;
+
+            });
         });
     }
 
