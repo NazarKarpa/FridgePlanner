@@ -229,3 +229,38 @@ body{
     size: 54px;
     width: 300px;
 }
+.logo{
+    display: flex;         
+    align-items: center;   
+    gap: 10px; 
+    width: 64px;
+    margin:0;
+
+    
+}
+.main-tag{
+    margin: 0;
+    gap: 10px;
+}
+
+header{
+   /* header */
+ 
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    
+    gap: 0px;
+    
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
