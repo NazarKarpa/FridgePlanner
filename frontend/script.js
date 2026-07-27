@@ -5,6 +5,59 @@ document.addEventListener("DOMContentLoaded", () => {
     const productInput = document.getElementById("productInput");
     const searchBtn = document.querySelector("#search");
     const resultContainer = document.querySelector(".result-container");
+    const addBtn = document.querySelector("#button-add");
+    const productsContainer = document.querySelector(".products-container");
+    const ingredients = [];
+
+
+    addBtn.addEventListener("click", () => {
+        const product = productInput.value.trim().toLowerCase();
+        if (product === "") return;
+        if (ingredients.includes(product)) {
+            alert("Такий продукт вже додано.");
+            return;
+        }
+        ingredients.push(product);
+        productInput.value = "";
+        renderProducts();
+    });
+
+    function renderProducts(){
+        productsContainer.innerHTML = "";
+        ingredients.forEach((product, index) => {
+
+            productsContainer.innerHTML += `
+                <div class="product-item">
+                    <span>${product}</span>
+                    <button class="delete-product" data-index="${index}">
+                        ❌
+                    </button>
+                </div>
+            `;
+
+        });
+        addDeleteEvents();
+    }
+
+    function addDeleteEvents(){
+        const buttons = document.querySelectorAll(".delete-product");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                const index = button.dataset.index;
+                ingredients.splice(index, 1);
+                renderProducts();
+            });
+        });
+    }
+
+    productInput.addEventListener("keydown", (event) => {
+
+    if (event.key === "Enter") {
+        addBtn.click();
+    }
+
+    });
 
 
     //-----------------API---------------//
@@ -12,11 +65,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const API_KEY = "d4d566d7a8e44533b61dd0506782f20e";
 
     searchBtn.addEventListener("click", async () => {
+        if (ingredients.length === 0) {
+            alert("Спочатку додайте хоча б один продукт.");
+            return;
+        }
 
-        const ingredients = productInput.value;
-
+        const query = ingredients.join(",");
         const response = await fetch(
-            `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&number=5&apiKey=${API_KEY}`
+            `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${query}&number=5&apiKey=${API_KEY}`
         );
 
         const recipes = await response.json();
