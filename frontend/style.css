@@ -294,3 +294,7 @@ header{
 .h2-list, .search, #productInput{
     margin-left: 5%;
 }
+.main-name{
+    color: white;
+    text-decoration: none;
+}
