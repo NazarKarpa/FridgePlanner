@@ -5,7 +5,7 @@ header{
     align-items: center;
     padding: 20px;
     margin: 0 auto;
-    gap: 53px;
+    gap: 3px;
     border-radius: 15px;
     
     background-color: #A8D5BA;
@@ -351,27 +351,7 @@ body{
     
 }
 
-header{
-   /* header */
- 
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    padding: 20px;
-    margin: 0 auto;
-    
-    gap: 0px;
-    
-    
-    
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
 
-}
 .arrow-pulse-animation:hover{
     display: inline-block;
     transition: 0.4s;
@@ -384,7 +364,20 @@ header{
 .h2-list, .search, #productInput{
     margin-left: 5%;
 }
+.products-container, .search{
+    margin-left: 17%;
+    max-height: 1500px;
+}
 .main-name{
     color: white;
     text-decoration: none;
+    margin-right: 255px;
+}
+#search{
+    max-height: 65px;
+    margin-top: 15px;
+}
+
+a {
+  text-decoration: none;
 }
