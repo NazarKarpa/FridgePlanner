@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="product-item">
                     <span>${product}</span>
                     <button class="delete-product" data-index="${index}">
-                        ❌
+                        <i class="bi bi-x-circle"></i>
                     </button>
                 </div>
             `;
