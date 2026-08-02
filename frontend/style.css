@@ -1,12 +1,12 @@
 header{
-    
+    max-width: 1500px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     margin: 0 auto;
-    
     gap: 53px;
+    border-radius: 15px;
     
     background-color: #A8D5BA;
     color: #FFFFFF;
@@ -14,6 +14,14 @@ header{
     
 }
             
+main {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
 
 .main-tag{
     padding: 4px;
@@ -23,6 +31,7 @@ header{
 
 body{
     background-color: #FAF9F5;
+    max-width: 1700px;
     color: #3D3D3D;
     display: 'flex';
 }
@@ -303,6 +312,7 @@ body{
 
 #search{
     padding: 8px 14px;
+    position: relative;
 }
 
 #productInput{
@@ -317,4 +327,64 @@ body{
     border: 1px solid #00c3ff;
     border-radius: 34px;
 
+}
+
+.arrow-back{
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+    color: rgb(20, 72, 20);
+    
+}
+.logo{
+    display: flex;         
+    align-items: center;   
+    gap: 10px; 
+    width: 64px;
+    margin:0;
+
+}
+.main-tag{
+    margin: 0;
+    gap: 10px;
+    width: 150%;
+    
+}
+
+header{
+   /* header */
+ 
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    
+    gap: 0px;
+    
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+.arrow-pulse-animation:hover{
+    display: inline-block;
+    transition: 0.4s;
+    transform: scale(1.1);
+}
+
+#recipe-image{
+    justify-content: right;
+}
+.h2-list, .search, #productInput{
+    margin-left: 5%;
+}
+.main-name{
+    color: white;
+    text-decoration: none;
 }
