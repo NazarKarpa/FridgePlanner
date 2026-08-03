@@ -35,22 +35,22 @@ document.addEventListener("DOMContentLoaded", async () => {
             recipe.aggregateLikes ?? 0;
 
         document.getElementById("recipe-vegetarian").textContent =
-            recipe.vegetarian ? "Так" : "Ні";
+            recipe.vegetarian ? "Yes" : "No";
 
         document.getElementById("recipe-vegan").textContent =
-            recipe.vegan ? "Так" : "Ні";
+            recipe.vegan ? "Yes" : "No";
 
         document.getElementById("recipe-gluten").textContent =
-            recipe.glutenFree ? "Так" : "Ні";
+            recipe.glutenFree ? "Yes" : "No";
 
         document.getElementById("recipe-dairy").textContent =
-            recipe.dairyFree ? "Так" : "Ні";
+            recipe.dairyFree ? "Yes" : "No";
 
         document.getElementById("recipe-healthy").textContent =
-            recipe.veryHealthy ? "Так" : "Ні";
+            recipe.veryHealthy ? "Yes" : "No";
 
         document.getElementById("recipe-cheap").textContent =
-            recipe.cheap ? "Так" : "Ні";
+            recipe.cheap ? "Yes" : "No";
 
         //---------------- Джерело ----------------//
 
